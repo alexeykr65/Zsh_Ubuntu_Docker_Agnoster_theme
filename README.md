@@ -7,3 +7,4 @@ docker container run --name UbZshRoot --hostname zsh-ubuntu --rm -it zsh-ubuntu-
 docker build -t zsh-ubuntu-cli-user -f cli-user/Dockerfile context
 docker container run --name UbZshUser --hostname zsh-ubuntu --rm -it zsh-ubuntu-cli-user  su -l user -c "/usr/bin/zsh"
 
+![Output example](output-example.png)
