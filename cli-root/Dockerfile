@@ -26,11 +26,3 @@ RUN cd && chsh -s /bin/zsh && \
     git clone https://github.com/powerline/fonts.git --depth=1 && \
     cd   fonts && \
     ./install.sh
-
-
-    # su - user -c "wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh && \
-    #                 git clone https://github.com/powerline/fonts.git --depth=1 && \
-    #                 cd /home/user/fonts  && \
-    #                 ./install.sh && \
-    #                 cd && \
-    #                 sed -i -e 's/robbyrussell/agnoster/' .zshrc "
