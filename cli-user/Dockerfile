@@ -18,6 +18,8 @@ RUN apt-get update \
 
 RUN cd && chsh -s /bin/zsh && \
     useradd -m -s /usr/bin/zsh user && \
+    usermod -aG sudo user && \
+    echo "user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
     sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     dpkg-reconfigure --frontend=noninteractive locales && \
     update-locale LANG=en_US.UTF-8 && \
